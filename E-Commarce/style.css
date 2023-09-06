@@ -1,4 +1,19 @@
 .logo{
-    width: 7%;
-    height: 7%;
+    width: 5%;
+    height: 5%;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+footer ul li{
+    list-style: none;
+  }
+  footer p{
+    color: red;
+    text-align: center;
+  }
+footer ul li a{
+    text-decoration: none;
 }
