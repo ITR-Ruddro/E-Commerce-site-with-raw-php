@@ -15,7 +15,7 @@
     <div class="container-fluid p-0">
 
         <!-- First Child Nav bar -->
-       <?php include_once './inc/title.php'?>
+       <?php include_once './inc/navbar.php'?>
 
 
         <!-- second child log in geust-->
