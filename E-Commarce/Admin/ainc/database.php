@@ -60,9 +60,9 @@ class database{
     // status print funtion
     public function statusbtn($status,$id,$header_location,$table_name){
         if($status==1){
-            return '<a href="ainc/status.php?id='.$id.'&status=0&location='.$header_location.'&table_name='.$table_name.'" type="button" class="btn btn-info btn-sm btn_size" >Active</a>';
+            return '<a href="ainc/status.php?id='.$id.'&status=0&location='.$header_location.'&table_name='.$table_name.'" type="button" class="btn btn-secondary btn-sm btn_size" >Active</a>';
         }else{
-            return '<a href="ainc/status.php?id='.$id.'&status=1&location='.$header_location.'&table_name='.$table_name.'" type="button" class="btn btn-info btn-sm btn_size" >Deactive</a>';
+            return '<a href="ainc/status.php?id='.$id.'&status=1&location='.$header_location.'&table_name='.$table_name.'" type="button" class="btn btn-secondary btn-sm btn_size" >Deactive</a>';
         } 
     }
 
@@ -73,6 +73,20 @@ class database{
         $sql = "update $table_name set status=$status where id = $id";
         $this->mysqli->query($sql);
 
+    }
+
+
+
+    //delete function
+    public function delete($id,$table_name){
+        $sql = "DELETE FROM $table_name WHERE id=$id";
+        $this->mysqli->query($sql);
+    }
+
+
+    // query function
+    public function query($sql){
+        return $this->mysqli->query($sql);
     }
 
 

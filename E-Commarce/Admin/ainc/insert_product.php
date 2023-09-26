@@ -56,6 +56,10 @@ $brand = $obj->show('brand');
             <input type="input" class="form-control" name="price" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input">
+            <h5>Enter Your product Quantity :</h5>
+            <input type="input" class="form-control" name="quantity" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input">
             <h5>Enter Your product Description :</h5>
             <input type="input" class="form-control" name="description" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>

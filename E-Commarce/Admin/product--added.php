@@ -62,6 +62,7 @@
     $cetegoryname = $_POST['cetegoryname'];
     $brandname = $_POST['brandname'];
     $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
     $description = $_POST['description'];
 
 
@@ -87,7 +88,7 @@
 
     $obj = new database();
 
-    $obj->insert("product",['product_name'=>$name,'cetegory_name'=>$cetegoryname,'brand_name'=>$brandname,'price'=>$price,'description'=>$description,'img'=>$uniqname,'date'=>$date]);
+    $obj->insert("product",['product_name'=>$name,'cetegory_name'=>$cetegoryname,'brand_name'=>$brandname,'price'=>$price,'quantity'=>$quantity,'description'=>$description,'img'=>$uniqname,'date'=>$date,'status'=>1]);
     
     
     ?>

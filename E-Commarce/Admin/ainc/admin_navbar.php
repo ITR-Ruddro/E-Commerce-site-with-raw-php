@@ -10,6 +10,6 @@
 
          <div class="container-fluid text-center">
             <h1>Welcome Mr x</h1>
-            <h4>You Can changes here anything with a user friendly GUI</h4>
+            <h5>You Can changes here anything with a user friendly GUI</h5>
             <br>
          </div>

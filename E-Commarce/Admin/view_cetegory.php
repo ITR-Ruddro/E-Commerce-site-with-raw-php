@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once '../inc/botstrap.php' ?>
-    <link rel="stylesheet" href="./admin_style.css">
+    <link rel="stylesheet" href="admin_style.css">
     <style>
-        table,td,th{
-            border: 1px solid black;
+        .btn_size{
+        width: 100px;
         }
     </style>
 
@@ -51,6 +51,7 @@
                 <th>Id</th>
                 <th>Cetegory Name</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
             
                 <?php
@@ -60,7 +61,8 @@
                             echo "<tr>";
                             echo "<td>" .$id. "</td>";
                             echo "<td>" .$row["cetegory_name"]. "</td>";
-                            echo "<td>". $obj->statusbtn($row["status"],$row["id"],$header_location,$table_name)."</td>";
+                            echo '<td style="width:25%">'. $obj->statusbtn($row["status"],$row["id"],$header_location,$table_name).'</td>';
+                            echo '<td style="width:40%"><a href="details_cetegory.php?cetegory='.$row['cetegory_name'].'" type="button" class="btn btn-success btn-sm">Show all</a>  <a href="" type="button" class="btn btn-warning btn-sm">Update</a>   <a href="ainc/delete.php?id='.$row['id'].'&header_location='.$header_location.'&table_name='.$table_name.'" type="button" class="btn btn-danger btn-sm ">Delete</a></td>';
                             echo "</tr>";
                             $id = $id + 1;
                         }

@@ -44,28 +44,6 @@
 
         <!-- Fifth div-->
         <div class="row">
-
-             <!-- side nav -->
-            <div class="col-sm-4 m-30 text-center">
-                <h3>Cetegory</h3>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-                    <?php include './inc/catagorylist.php'?>
-
-                    <?php include './inc/catagorylist.php'?>
-
-                    <?php include './inc/catagorylist.php'?>
-
-                    <?php include './inc/catagorylist.php'?>
-
-                    <?php include './inc/catagorylist.php'?>
-
-                    <?php include './inc/catagorylist.php'?>
-                    
-                </ul> 
-            </div>
-
-
             <!-- slide bar -->
             <?php include_once './inc/slidebar.php'?>
         </div>
@@ -79,7 +57,7 @@
 
    
     </div>
-
+    <hr>
     <?php include_once './inc/footer.php' ?>
 
 

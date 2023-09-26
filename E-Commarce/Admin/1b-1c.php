@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include_once '../inc/botstrap.php' ?>
-    <link rel="stylesheet" href="./admin_style.css">
-    <title>welcome Admin</title>
+    <link rel="stylesheet" href="admin_style.css">
+    <style>
+        table,td,th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .btn_size{
+        width: 100px;
+        }
+    </style>
+
+    <!--title-->
+    <title>All Product Under Brand</title>
 </head>
 <body>
+
     <div class="container-fluid">
         <!--navbar-->
         <?php include_once 'ainc/admin_navbar.php' ?>
-
+        <!--Dashboard pagination-->
         <section class="widget">
             <h2>Welcome to the Dashboard</h2>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="admin_index.php">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="view_cetegory.php">Cetegory List</a></li>
-                <li class="breadcrumb-item"><a href="view_brand.php">Brand List</a></li>
-                <li class="breadcrumb-item active"><a href="view_product.php">Product List</a></li>
+                <li class="breadcrumb-item active"><a href="details_brand.php">All Product Under Cetegory</a></li>
             </ol>
         </section>
+
     </div>
 
 
     <!--Db Connection-->
     <?php include 'ainc/database.php';
     $table_name = 'product';
+    $brand = $_GET['brand'];
+    $cetegory = $_GET['cetegory'];
 
+    $sql = "SELECT * FROM product WHERE brand_name ='$brand' AND cetegory_name='$cetegory'";
     $obj = new database();
-    $result = $obj->show($table_name);
+    
+    $result = $obj->query($sql);
+
+   
+    $header_location = '../view_brand.php';
 
     $id = 1;
 
-    $header_location ="../view_product.php";
-
-    
     ?>
     
-    <!--Table for data show-->
-    <div class="container-fluid text-center">
+    <!--details show-->
+ <!--Table for data show-->
+ <div class="container-fluid text-center">
         <table style="width:100%;">
             <tr>
                 <th style="width:5%">Id</th>
@@ -77,7 +94,6 @@
             
         </table>
     </div>
-
 
 
 
